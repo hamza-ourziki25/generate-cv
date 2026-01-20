@@ -26,4 +26,4 @@ Application web qui permet à un utilisateur de :
 ### Étapes
 1. Cloner le projet ou télécharger le code :
    ```bash
-   git clone https://github.com/hamza-ourziki25/REPO_NAME.git
+   git clone https://github.com/hamza-ourziki25/generate-cv.git
