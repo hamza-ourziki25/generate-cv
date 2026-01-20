@@ -1,0 +1,184 @@
+   * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    color: white;
+    overflow: hidden;
+  }
+
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  form {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 360px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4), 0 0 60px rgba(255,255,255,0.05);
+    border: 2px solid rgba(255,255,255,0.15);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  form:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px rgba(255,255,255,0.3), 0 0 80px rgba(255,255,255,0.1);
+  }
+
+  form::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #00f5ff, #ff00c8, #00ff99, #ffbb00);
+    background-size: 300%;
+    z-index: -1;
+    filter: blur(18px);
+    opacity: 0.4;
+    animation: neonFlow 8s linear infinite;
+  }
+
+  @keyframes neonFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  label {
+    display: block;
+    margin-top: 12px;
+    color: #e0e0e0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 0 rgba(0,255,255,0);
+  }
+
+  input:focus {
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 0 12px #00eaff, 0 0 30px #0077ff;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    background: linear-gradient(90deg, #00d4ff, #0077ff, #8f00ff);
+    background-size: 300% 100%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-position: 100% 0;
+    box-shadow: 0 0 20px #00eaff, 0 0 40px #0077ff;
+    transform: scale(1.02);
+  }
+
+  button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 10px #00bfff;
+  }
+
+  .signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #e0e0e0;
+  }
+
+  .signup-link a {
+    color: #00eaff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .signup-link a:hover {
+    color: #ff66ff;
+    text-shadow: 0 0 8px #ff66ff, 0 0 16px #00eaff;
+  }
+
+  body::before, body::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.5;
+    animation: floatGlow 10s infinite ease-in-out alternate;
+  }
+  body::before {
+    top: -100px;
+    left: -120px;
+    background: rgba(0,255,255,0.4);
+  }
+  body::after {
+    bottom: -100px;
+    right: -120px;
+    background: rgba(255,0,255,0.35);
+  }
+
+  @keyframes floatGlow {
+    from { transform: translateY(0px) rotate(0deg); }
+    to { transform: translateY(-40px) rotate(10deg); }
+  }
+
+  @media (max-width: 420px) {
+    form {
+      width: 90%;
+      padding: 30px 20px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+  }
+input::placeholder {
+    color: black; 
+}
